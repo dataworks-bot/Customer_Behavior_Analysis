@@ -1,77 +1,44 @@
-🛒 Customer Shopping Behavior – Data Analytics Project
+# 🛒 Customer Shopping Behavior – Data Analytics Project
 
-📌 Overview
-This project analyzes 3,900 real shopping transactions to understand customer behavior, spending trends, product preferences, and loyalty patterns. The end-to-end workflow includes Python-based EDA, SQL analysis in PostgreSQL, and an interactive Power BI dashboard to support business decision-making. 
+> Forked from [Adityaranjan2003/Customer_Behavior_Analysis](https://github.com/Adityaranjan2003/Customer_Behavior_Analysis). Original project by Aditya Ranjan. My changes are listed below.
 
+## My changes
+- Ran the Python notebook to explore the cleaned dataset (3,900 rows, 18 columns).
+- Loaded the data into MySQL and ran all 10 business queries myself.
+- Added a "Customer Satisfaction" page to the Power BI dashboard showing average review rating by category.
 
-📂 Dataset
-Rows: 3,900
-Columns: 18
-Features include: demographics, purchase details, discounts, ratings, frequency, and subscription status
-Missing values: 37 ratings (imputed using median by category) 
+## 📌 Overview
+This project analyzes 3,900 shopping transactions to understand customer behavior, spending trends, product preferences, and loyalty patterns, using Python, SQL and Power BI.
 
+## 📂 Dataset
+- Rows: 3,900 | Columns: 18
+- Features: demographics, purchase details, discounts, ratings, purchase frequency, subscription status
+- 37 missing ratings were filled using the median rating of each category (in the original cleaning step)
 
-🛠 Tools Used
-Python (Pandas, NumPy, Visualization)
-MySQL (SQL queries & business insights)
-Power BI (dashboard & storytelling)
-Gamma (presentation)
+## 🛠 Tools Used
+- Python (Pandas, NumPy, Matplotlib, Seaborn)
+- MySQL (SQL queries)
+- Power BI (dashboard)
 
+## 🔍 SQL Business Questions
+Revenue by gender, discount users who still spend above average, top-rated products, express vs standard shipping, subscribers vs non-subscribers, discount-dependent products, customer segments (New / Returning / Loyal), top 3 products per category, repeat buyers and subscriptions, revenue by age group.
 
-🔍 Key Project Steps
-✔ Data Cleaning & Preparation (Python)
-Loaded & explored data
-Standardized column names
-Created age groups & purchase frequency fields
-Removed redundancy between discount & promo fields
-Loaded cleaned data into PostgreSQL 
+## 📊 Dashboard
+- KPIs: ~2.7K customers (with the Male filter on), $59.54 average purchase, 3.75 average rating
+- Sales and revenue by category, subscription split, age group performance
+- New page: average review rating by category
 
+## 📈 What I observed
+- Clothing is the biggest category by sales and revenue
+- Young adults bring in the most revenue
+- About 60% of customers are non-subscribers, and non-subscribers spent more than subscribers
+- Average ratings are very similar across categories
 
-✔ SQL Business Analysis
-Examples include:Revenue by gender
-Discount-driven high-spenders
-Top-rated products
-Shipping price comparison
-Subscriber vs non-subscriber revenue
-Discount-dependent products
-Customer segmentation (New / Returning / Loyal)
-Top 3 products per category
-Revenue by age group 
+## ▶️ How to Run
+1. Run the notebook on the cleaned CSV
+2. Load the data into MySQL (table `mytable`, database `customer_behavior`)
+3. Run `customer_behavior_sql_queries.sql`
+4. Open `customer_behavior_dashboard.pbix` in Power BI Desktop
 
-✔ Dashboard in Power BI
-Interactive visuals showing:
-KPIs (customers, avg spend, avg rating)
-Sales & revenue by category
-Subscription impact
-Age-group performance
-Shipping preferences 
-
-
-
-📈 Key Insights
-Loyal customers form the majority of revenue
-Express shipping users spend slightly more
-Some products rely heavily on discounts
-Young adults contribute the highest revenue
-Higher purchase frequency links to subscriptions 
-
-
-
-💡 Business Recommendations
-Strengthen loyalty programs
-Promote subscription benefits
-Optimize discount strategy
-Highlight top-rated products
-Target high-revenue age groups 
-
-
-▶️ How to Run
-Load dataset into Python & clean
-Push cleaned data to PostgreSQL
-Run SQL queries for insights
-Import final dataset to Power BI
-View interactive dashboard
-Present findings via Gamma deck
-
-👤 Author
-Aditya Ranjan // Linkedln - www.linkedin.com/in/aditya-ranjan-3bab11248
+## 👤 Credits
+Original project by Aditya Ranjan ([LinkedIn](https://www.linkedin.com/in/aditya-ranjan-3bab11248)). Adapted and extended by Ankitha P.
